@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+        <head>
+                <title>teste</title>
+        </head>
+        <style>
+            
+            *{
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+            header{
+                width: 100%;
+                background-color: rgb(21, 90, 33);
+                display: flex;
+                justify-content: space-around;
+                align-items: center;
+                padding: 10px 0;
+            }
+            .container-logo{
+                display: flex;
+                align-items: center;
+            }
+            .texto-logo{
+                margin-right: 0;
+                color: rgb(255, 255, 255);
+                position: absolute;
+            }
+            .menu li{
+                display: inline-block;
+                margin: 0 10px;
+            }
+            .menu li a{
+                font-size: 30px;
+                color: rgb(255, 255, 255);
+                text-decoration: none;
+                text-transform: uppercase;
+                padding: 10px 15px;
+                border-radius: 15px;
+            }
+            .menu li a:hover{
+                background-color: rgba(182, 182, 182, 0.575);
+            }
+            h1{
+                color: rgb(255, 255, 255);
+            }
+            .barra{
+                font-size: 20px;
+                align-items: center;
+                margin-left: 65px;
+                margin-right: 0;
+                background-color: rgba(21, 90, 32, 0);
+                color: white;
+                width: 200px;
+                border: 2px solid white;
+                border-radius: 4px;
+                padding: 5px;
+            }
+            .busca{
+                font-size: 15px;
+                align-items: center;
+                color: white;
+                background-color: rgba(0, 0, 0, 0);
+                padding: 5px;
+                width: 60px;
+                border: 2px solid white;
+            }
+
+            .barra::placeholder{
+                color:white
+            }
+            .container-loja{
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                margin-top: 2.5%;
+            }
+            .roupa{
+                padding: 18px 18px;
+                border-radius: 15px;
+            }
+            .container-loja img{
+                width: 350px;
+                height: 350px;
+            } 
+            .container-loja a {
+                text-decoration: none;
+            }
+            .container-loja :hover {
+                background-color: #940707;
+            }
+            .container-loja h6{
+                color: white;
+                font-size: 20px;
+                text-align: center;
+                margin-bottom: 10px;
+            }
+            .botao_cor{
+                width: 20;
+                height: 40;
+                margin-right: -150px;
+                margin-left: -50px;
+                background-color: #94070700;
+                border: 2px solid white;
+                font-size: 15px;
+                padding: 5px;
+                color: white;
+            }
+
+        </style>
+        <body>
+            <header>
+                <button class="botao_cor"onclick="mudarCor()">Mudar Cor</button>
+                <div class="container-logo">
+                    <div class="texto-logo"></div>
+                    <img src="imagens/flu3.png" style="width: 90px;height: 90px;margin-right: 50px;margin-left: 30px;">
+                    <h1>FLUMINENSE</h1>
+                    <form>
+                        <input type="text" class="barra" name="search" placeholder="Pesquisar">
+                        <input type="submit" class="busca"value="Buscar">
+                      </form>                      
+                    <ul>
+                </div>
+                <div class="menu">
+                        <li><a href="loja.html">Loja</a></li>
+                        <li><a href="#">Promoção</a></li>
+                        <li><a href="#">Calendário</a></li>
+                    </ul>
+                </div>
+            </header>
+            <div class="container-loja">
+                <div class="roupa">
+                <a href="https://www.loja.fluminense.com.br/camisa-tricolor-2023/p">
+                <h6>CAMISA FLUMINENSE<br>2023</h6>
+                        <img src="imagens/camisaF.png">
+                    </a>
+                </div>
+                <div class="roupa">
+                    <a href="#">
+                <h6>CAMISA FLUMINENSE<br>2020</h6>
+                <img src="imagens/camisa2020.png">
+                    </a>
+                </div>
+                <div class="roupa">
+                    <a href="#">
+                <h6>CAMISA FLUMINENSE<br>TREINO 2023</h6>
+                <img src="imagens/camisatreino.png">
+                    </a>
+                </div>
+                <div class="roupa">
+                    <a href="#">
+                <h6>CAMISA FLUMINENSE<br>BRANCA 2021</h6>
+                <img src="imagens/camisa2021-branca.png">
+                    </a>
+                </div>
+                <div class="roupa">
+                    <a href="#">
+                <h6>CAMISA FLUMINENSE<br>CINZA 2022</h6>
+                <img src="imagens/camisacinza2022.png">
+                    </a>
+                </div>
+                <div class="roupa">
+                    <a href="#">
+                <h6>CAMISA FLUMINENSE<br>BRANCA 2023</h6>
+                <img src="imagens/camisabranca 2023.png">
+                    </a>
+                </div>
+                    </div>
+                    <script>
+        function mudarCor() {
+            var header = document.querySelector('header');
+            var corAtual = header.style.backgroundColor;
+            if (corAtual === 'rgb(21, 90, 33)') {
+                header.style.backgroundColor = '#940707'; // Nova cor do background
+            } else {
+                header.style.backgroundColor = '#155a21'; // Cor original do background
+            }
+        }  
+                    </script>
+        </body>
+</html>
